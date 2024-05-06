@@ -1,9 +1,9 @@
 # Alchitry_Au_test
 A program to exercize and test the Alchitry Au Main and I/O boards
 Files on github:
-	fpga1_top.bin
+  fpga1_top.bin
   fpga_top.xdc
- 	Pin_Out.txt
+  Pin_Out.txt
   fpga1_top.vhd
   fpga1_top_uC16.vhd
 
@@ -14,10 +14,11 @@ Files on github:
 
 fpga_top.xdc
 It is the Xilinx Vivado constraints file for the Alchitry Au main board
-Bridge and I/O board, the pin-out is fully described in Pin_Out.txt     attached to the project.
+Bridge and I/O board, the pin-out is fully described in Pin_Out.txt attached to the project.
 
 Pin_Out.txt
-It is a full pin out description for the Alchitry Au main board, the Bridge and I/O boards. Perhaps this will help to create a custom pin-out quicker instead of reverse engineering.
+It is a full pin out description for the Alchitry Au main board, the Bridge and I/O boards.
+Perhaps this will help to create a custom pin-out quicker instead of reverse engineering.
 
 fpga1_top.vhd 
 The top file as a reference how I/Os are connected to the hardware.
@@ -26,14 +27,14 @@ I recommend the use of Tera-Term a nice and easy to use terminal emulator.
 The setup to communicate with the processor Opus1-16 on board is:
 
   baud rate       : 115,200
-  data               :  8-bits
-  parity            : none
-  stop bits        :  1
-  flow control : none
+  data            :  8-bits
+  parity          : none
+  stop bits       :  1
+  flow control    : none
   
   Terminal (new line setup):
-   receive     : auto
-   transmit  : CR
+   receive        : auto
+   transmit       : CR
 
 MasterControl.asm  is the assembly code to program  the processor.
 I'm attaching also the ISA (Instruction Set Architecture) to have a better idea of the processor capabilities
@@ -46,7 +47,8 @@ I'll commit that project later if there is enough interest. A multiprocessor des
 
 fpga1_top.bin
 The bin file can be loaded using Alchitry program/loader
-Connect the Alchitry_au  board USB to a laptop/PC. Verify the FTDI port is recognized by Windows. Check in Device Manager. Download the drivers if needed
+Connect the Alchitry_au  board USB to a laptop/PC. Verify the FTDI port is recognized by Windows.
+Check in Device Manager. Download the drivers if needed
  
 A basic use of the interface and terminal commands:
 Main Menu:
@@ -59,7 +61,7 @@ v = version number
 
 Application Menu:
 
-w = walking pattern, LEDs on I/O board, enter a 16 bit pattern
+w = walking pattern, LEDs on I/O board, enter a 8 bit pattern
 
 s = copy dip switches to LEDs
 
